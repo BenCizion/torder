@@ -58,9 +58,18 @@
 
             /* VAST/HTML 콘텐츠가 여기에 띄워짐 (테스트용) */
             display: flex;
+            /* ensure child can stretch to fill */
+            align-items: stretch;
             justify-content: center;
-            align-items: center;
             text-align: center;
+            padding: 0;
+        }
+
+        /* attractt container should fill the right-panel */
+        .attractt-container {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         /* 테스트용 텍스트 스타일 */
@@ -89,21 +98,22 @@
     <div class="torder-screen">
 
         <div class="left-panel">
-            <h2>#꽃게당 해시태그 이벤트!</h2>
+            <h2>#티오더 해시태그 이벤트!</h2>
             <div class="qr-placeholder">
                 (QR 코드 영역)
             </div>
             <p>
-                인스타그램에 <strong>#꽃게당</strong> 태그로<br>
+                인스타그램에 <strong>#티오더</strong> 태그로<br>
                 인증샷을 올리면<br>
                 콘텐츠가 오른쪽에 뿅!
             </p>
         </div>
 
         <div class="right-panel">
+            <!--
             <h2>실시간 UGC 콘텐츠 노출 영역</h2>
             <p>(VAST 또는 HTML이 여기에 로드됩니다)<br>1280x800 중 이 영역 (60%)</p>
-
+            -->
             <script type="text/javascript">
                 (function(d, s) {
                     var j, e = d.getElementsByTagName(s)[0], h = "https://cdn.attractt.com/embed_v2/index.js";
