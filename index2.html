@@ -62,19 +62,20 @@
             min-height: 0;
         }
 
-        /* ----- OPTION A: 1:1 정사각 비율 (권장) ----- */
+        /* ----- OPTION A: 1:1 정사각 비율----- */
         /* 1) Modern 브라우저: aspect-ratio 사용
            2) Fallback: padding-top trick 적용 (구형 브라우저 호환)
            3) Attractt가 iframe을 주입해도 내부 iframe이 절대 위치로 꽉 채우도록 강제 */
+        /*
         .attractt-container {
             width: 100%;
-            max-width: 460px;        /* 원하면 최대 크기를 조정하세요 (예: 460px) */
-            aspect-ratio: 1 / 1;     /* 최신 브라우저에서 정사각 보장 */
+            max-width: 460px;        
+            aspect-ratio: 1 / 1;    
             position: relative;
-            padding-top: 100%;       /* padding-top fallback -> 1:1 */
-            flex: 0 0 auto;          /* 세로로 늘어나지 않도록 */
-            margin: 0 auto;          /* 수평 중앙 정렬 */
-            align-self: center;      /* right-panel 내부에서 수직 중앙 정렬 */
+            padding-top: 100%;    
+            flex: 0 0 auto;      
+            margin: 0 auto;  
+            align-self: center;      
             min-height: 0;
             box-sizing: border-box;
             overflow: hidden;
@@ -82,6 +83,7 @@
         }
 
         /* Attractt가 iframe을 주입하면 절대 위치로 채움 */
+       /*
         .attractt-container iframe,
         .attractt-container > iframe {
             position: absolute !important;
@@ -92,10 +94,10 @@
             border: 0 !important;
             display: block !important;
         }
+        */
 
-        /* ----- OPTION B (대체): 고정 크기 370x460로 맞추기 원할 경우
-           아래 규칙을 사용 (파일 내에서 주석 처리/해제하여 선택) */
-        /*
+        /* ----- OPTION B (대체): 고정 크기 370x460로 맞추기 원할 경우 */
+        
         .attractt-container {
             width: 370px;
             height: 460px;
@@ -113,7 +115,7 @@
             border: 0 !important;
             display: block !important;
         }
-        */
+        
 
         /* 테스트용 텍스트 스타일 */
         h2 {
